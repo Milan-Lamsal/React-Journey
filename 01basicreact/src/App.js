@@ -1,11 +1,13 @@
-
-
+import Coffee from "./Second_react";
 
 function App() {
   return (
-    <h1>Hello world </h1>
-    
+    <>
+      <Coffee />
+      <h2>Second React App</h2>
+      <h1>Hello world </h1>
+    </>
   );
 }
 
-export default App;
+export default Coffee;
