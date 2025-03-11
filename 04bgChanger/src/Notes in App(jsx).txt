@@ -1,0 +1,35 @@
+Why useState?
+You're storing and updating a local UI state (color), so useState is the right choice.
+useFormState is only for managing server-side form submissions in frameworks like Next.js (App Router).
+🚀 Use useState for UI updates and interactions!
+
+const [color, setColor] = useState("olive"); // default color
+->Declares a state variable (color) with a default value "olive".
+Provides a function (setColor) to update the state.
+useState is a React Hook that allows components to manage state.
+
+Syntax Breakdown 
+const [stateVariable, setStateFunction] = useState(initialValue);
+
+Can't use Class cus its a reserved KeyWord So we use className
+
+// why should we use  ========   onClick={()=>setColor("red")}?
+
+//onClick ={setColor}?why can't we use this one or this one onClick={setColor("red")}
+
+Conclusion
+
+onClick expects a function reference, meaning it should receive a function that will be executed later when the event occurs.
+If you do onClick={setColor("red")}, it immediately executes setColor("red") during rendering, because setColor("red") returns a value, not a function.
+However, onClick expects a function, not a return value.
+
+This passes a function (() => setColor("red")) to onClick, so it only runs when clicked.
+
+This immediately calls setColor("red") when the component renders and assigns its return value to onClick.
+Since setColor doesn't return a function, this breaks the behavior.
+
+
+
+
+
+
