@@ -1,0 +1,123 @@
+Custom React Implementation Learning Notes
+===================================
+
+1. React Element Structure
+-------------------------
+- Understanding how React elements are structured internally:
+  * type: Defines the HTML element type (e.g., "a", "div")
+  * props: Object containing element properties
+  * children: Content inside the element
+
+Example Structure:
+```javascript
+const reactElement = {
+  type: "a",
+  props: {
+    href: "https://google.com/",
+    target: "_blank"
+  },
+  children: "click me to visit google"
+}
+```
+
+2. Custom Render Function
+------------------------
+- Implementation of basic React-like rendering:
+  * Takes two parameters:
+    - Element: The React element to render
+    - Container: Where to render (DOM node)
+  * Creates actual DOM elements
+  * Handles props and attributes
+  * Manages element insertion into DOM
+
+3. DOM Manipulation
+------------------
+Key DOM Methods Used:
+- document.createElement(): Creating HTML elements
+- element.setAttribute(): Setting element attributes
+- element.innerHTML: Setting element content
+- container.appendChild(): Adding elements to DOM
+
+4. Props Handling
+----------------
+- Iterating over props object
+- Setting attributes dynamically
+- Special handling for 'children' prop
+- Converting React-style props to DOM attributes
+
+5. Basic React Concepts
+----------------------
+Learning points about React's:
+- Virtual DOM representation
+- Element creation
+- Props system
+- Rendering process
+- DOM updates
+
+6. Code Evolution
+----------------
+Two approaches demonstrated:
+a) Basic Implementation:
+   - Direct attribute setting
+   - Hardcoded property handling
+
+b) Advanced Implementation:
+   - Dynamic props handling
+   - Modular approach with loops
+   - More flexible and reusable
+
+7. JavaScript Concepts Used
+--------------------------
+- Object manipulation
+- For...in loops
+- Conditional statements
+- DOM API usage
+- Function parameters
+- Object property access
+
+8. Best Practices Shown
+----------------------
+1. Code modularity
+2. Property validation
+3. Dynamic attribute handling
+4. Clean code structure
+5. Proper commenting
+6. Separation of concerns
+
+9. Understanding React Internals
+------------------------------
+- How React creates elements
+- Element to DOM conversion
+- Property handling system
+- Render process flow
+- Virtual DOM concept
+
+10. Key Implementation Details
+---------------------------
+- Element creation process
+- Property assignment
+- Child content handling
+- DOM node insertion
+- Container management
+
+Key Takeaways
+------------
+This project demonstrates:
+- Basic React-like rendering engine
+- DOM manipulation fundamentals
+- Props and attributes handling
+- Element creation process
+- React's internal structure
+- Modular code development
+
+Important Concepts
+-----------------
+1. React Element Structure
+2. Virtual DOM Representation
+3. Props System
+4. Render Process
+5. DOM Updates
+6. Element Creation
+7. Attribute Handling
+
+Note: This custom implementation helps understand React's internal working at a fundamental level. It shows how React converts JSX into actual DOM elements and manages the rendering process. This knowledge is valuable for understanding React's behavior and debugging React applications. 

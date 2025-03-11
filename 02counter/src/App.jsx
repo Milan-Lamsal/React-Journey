@@ -11,12 +11,17 @@ function App() {
  const addValue = () => {
   // console.log("Vlaue added:", Math.random());
   console.log("Vlaue added:", counter);
-  if(counter >= 0 && counter <10) {
-  // counter = counter+1;
-  setCounter(counter+1);
-  } else{
-    alert("Counter can't go beyond 10");
-  }
+  setCounter(prevCounter => prevCounter + 1);
+  setCounter(prevCounter => prevCounter + 1);
+  setCounter(prevCounter => prevCounter + 1);
+  setCounter(prevCounter => prevCounter + 1);
+  setCounter(prevCounter => prevCounter + 1);
+  // if(counter >= 0 && counter <10) {
+  // // counter = counter+1;
+  // setCounter(counter+1);
+  // } else{
+  //   alert("Counter can't go beyond 10");
+  // }
  }
  const decreaseValue =()=>{
   if(counter>0){

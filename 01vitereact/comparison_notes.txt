@@ -1,0 +1,89 @@
+Basic React vs Vite React - Key Differences
+=======================================
+
+1. Project Creation
+------------------
+Create React App:
+```bash
+npx create-react-app 01basicreact
+```
+
+Vite:
+```bash
+npm create vite@latest 01vitereact
+# Then select React and JavaScript
+```
+
+2. Running the Project
+---------------------
+Create React App:
+```bash
+npm start
+```
+
+Vite:
+```bash
+npm run dev
+```
+
+3. Important Naming Rules
+------------------------
+CAPITALIZATION IS VERY IMPORTANT IN REACT!
+
+- Component Files: Must start with Capital letter
+  ✅ Coffee.jsx, Card.jsx, App.jsx
+  ❌ coffee.jsx, card.jsx, app.jsx
+
+- Component Names: Must be Capitalized
+  ✅ function Coffee() { }
+  ❌ function coffee() { }
+
+- When Importing Components:
+  ✅ import Coffee from "./Coffee"
+  ❌ import coffee from "./Coffee"
+
+4. Main Differences in Code
+--------------------------
+File Extensions:
+- Basic React: .js for components
+- Vite: .jsx for components
+
+Entry Point:
+- Basic React: src/index.js
+- Vite: src/main.jsx
+
+Fragment Syntax (both work in either):
+```jsx
+// Empty fragment
+<>
+  <h1>Hello</h1>
+</>
+
+// Or div wrapper
+<div>
+  <h1>Hello</h1>
+</div>
+```
+
+5. Key Learning Points
+---------------------
+1. Components must be Capitalized
+2. Each component can return only ONE parent element
+3. Use fragments (<> </>) to wrap multiple elements
+4. JavaScript expressions work inside { }
+5. Props are passed like HTML attributes
+
+Example:
+```jsx
+function App() {
+  const name = "Debal"  // JS variable
+  return (
+    <>
+      <Coffee name={name} />  {/* Passing props */}
+      <h1>Hello {name}</h1>   {/* Using JS in JSX */}
+    </>
+  )
+}
+```
+
+Note: Focus on these basics first. The main difference between CRA and Vite is just in setup and running commands. The React code works the same way in both! 
