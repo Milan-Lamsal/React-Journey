@@ -105,7 +105,11 @@ const router = createBrowserRouter(
       <Route path="game" element={<StyleGame />} />
       <Route path="github" element={<Github />} loader={githubInfoLoader} />
     </Route>
-  )
+  ),
+{
+    basename: '/React-Journey'
+  }
+)
 );
 ```
 
