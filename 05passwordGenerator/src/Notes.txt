@@ -6,7 +6,7 @@ useEffec Hook
 # Detailed Notes on the Password Generator Project
 
  1. Project Overview
-This React application generates random passwords based on user-defined criteria, such as length and the inclusion of numbers and special characters. Users can easily copy the generated password to the clipboard with a button click.
+This React application generates random passwords based on user-defined criteria, such as length and including numbers and special characters. Users can easily copy the generated password to the clipboard with a button click.
 
 ---
 
