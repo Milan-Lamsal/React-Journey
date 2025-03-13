@@ -163,24 +163,24 @@ export default function StyleGame() {
     }, [matchedPairs, gameStarted]);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-16">
-            <div className="max-w-4xl mx-auto px-4">
+        <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-4 sm:py-8 lg:py-16 overflow-x-hidden">
+            <div className="w-full max-w-4xl mx-auto px-2 sm:px-4 lg:px-8">
                 {/* Game title and description */}
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold sm:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600 hover:scale-105 transition-transform duration-300">
+                <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600 hover:scale-105 transition-transform duration-300">
                         Hairstyle Memory Match
                     </h1>
-                    <p className="text-gray-300 max-w-2xl mx-auto text-lg transform hover:scale-105 transition-transform duration-300">
+                    <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto px-2 transform hover:scale-105 transition-transform duration-300">
                         Match the hairstyle pairs to win! Test your memory and learn about different styles.
                     </p>
                 </div>
 
                 {/* Game stats */}
-                <div className="flex justify-center gap-8 mb-8">
-                    <div className={`text-2xl font-bold text-amber-400 ${score > 0 ? 'bounce-effect' : ''}`}>
+                <div className="flex justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
+                    <div className={`text-xl sm:text-2xl font-bold text-amber-400 ${score > 0 ? 'bounce-effect' : ''}`}>
                         Score: {score}
                     </div>
-                    <div className="text-2xl font-bold text-gray-300">
+                    <div className="text-xl sm:text-2xl font-bold text-gray-300">
                         Moves: {moves}
                     </div>
                 </div>
@@ -190,19 +190,19 @@ export default function StyleGame() {
                     <div className="text-center">
                         <button
                             onClick={startGame}
-                            className="px-6 py-3 text-slate-900 bg-gradient-to-r from-amber-400 to-amber-500 rounded-lg hover:from-amber-500 hover:to-amber-600 transition-all duration-300 font-medium transform hover:scale-110 hover:rotate-2"
+                            className="px-6 py-3 text-base sm:text-lg text-slate-900 bg-gradient-to-r from-amber-400 to-amber-500 rounded-lg hover:from-amber-500 hover:to-amber-600 transition-all duration-300 font-medium transform hover:scale-110 hover:rotate-2"
                         >
                             Start New Game
                         </button>
                     </div>
                 ) : (
-                    <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 mb-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
                         {cards.map((card) => (
                             <button
                                 key={card.uniqueId}
                                 onClick={() => handleCardClick(card)}
                                 disabled={matchedPairs.includes(card.id)}
-                                className={`aspect-square rounded-xl border-2 transition-all duration-300 flex items-center justify-center text-4xl transform perspective-1000
+                                className={`aspect-square rounded-xl border-2 transition-all duration-300 flex items-center justify-center text-2xl sm:text-4xl transform perspective-1000
                                     ${flippedCards.includes(card.uniqueId) ? 'flip-card' : 'unflip-card'}
                                     ${matchedPairs.includes(card.id) && isMatched ? 'match-celebrate' : ''}
                                     ${flippedCards.includes(card.uniqueId) || matchedPairs.includes(card.id)
@@ -211,9 +211,9 @@ export default function StyleGame() {
                                     }`}
                             >
                                 {(flippedCards.includes(card.uniqueId) || matchedPairs.includes(card.id)) ? (
-                                    <div className="text-center transform transition-transform duration-300 hover:scale-110">
-                                        <div className="text-4xl mb-2">{card.emoji}</div>
-                                        <div className="text-sm text-amber-400">{card.name}</div>
+                                    <div className="text-center transform transition-transform duration-300 hover:scale-110 p-2">
+                                        <div className="text-2xl sm:text-4xl mb-1 sm:mb-2">{card.emoji}</div>
+                                        <div className="text-xs sm:text-sm text-amber-400">{card.name}</div>
                                     </div>
                                 ) : (
                                     <span className="text-amber-400 sparkle-effect">✨</span>
@@ -224,9 +224,9 @@ export default function StyleGame() {
                 )}
 
                 {/* Game instructions */}
-                <div className="mt-12 bg-slate-800/50 rounded-xl border border-slate-700 p-8 transform hover:scale-105 transition-transform duration-300">
-                    <h2 className="text-2xl font-bold text-amber-400 mb-4">How to Play</h2>
-                    <ul className="text-gray-300 space-y-2">
+                <div className="mt-8 sm:mt-12 bg-slate-800/50 rounded-xl border border-slate-700 p-4 sm:p-8 transform hover:scale-105 transition-transform duration-300">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-amber-400 mb-4">How to Play</h2>
+                    <ul className="text-sm sm:text-base text-gray-300 space-y-2">
                         <li className="hover:text-amber-400 transition-colors duration-200">1. Click cards to flip them and reveal hairstyles</li>
                         <li className="hover:text-amber-400 transition-colors duration-200">2. Match pairs of identical hairstyles</li>
                         <li className="hover:text-amber-400 transition-colors duration-200">3. Each match earns you 100 points</li>
@@ -237,12 +237,12 @@ export default function StyleGame() {
 
                 {matchedPairs.length === hairstyles.length && (
                     <div className="mt-8 text-center animate-bounce">
-                        <div className="text-3xl font-bold text-amber-400 mb-4 glow-effect">
+                        <div className="text-2xl sm:text-3xl font-bold text-amber-400 mb-4 glow-effect">
                             🎉 Congratulations! Game Complete! 🎉
                         </div>
                         <button
                             onClick={startGame}
-                            className="px-6 py-3 text-slate-900 bg-gradient-to-r from-amber-400 to-amber-500 rounded-lg hover:from-amber-500 hover:to-amber-600 transition-all duration-300 font-medium transform hover:scale-110 hover:rotate-2"
+                            className="px-6 py-3 text-base sm:text-lg text-slate-900 bg-gradient-to-r from-amber-400 to-amber-500 rounded-lg hover:from-amber-500 hover:to-amber-600 transition-all duration-300 font-medium transform hover:scale-110 hover:rotate-2"
                         >
                             Play Again
                         </button>

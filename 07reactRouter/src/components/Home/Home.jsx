@@ -1,134 +1,110 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import HairLogo from '../../assets/HairLogo.png'
 import BackgroundImage from '../../assets/BackgroundImage.png'
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
-            <div className="mx-auto w-full max-w-7xl">
-                {/* Hero Section */}
-                <section className="relative overflow-hidden rounded-lg sm:mx-16 mx-2 sm:py-16">
-                    <div className="relative z-10 max-w-screen-xl px-4 pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
-                        <div className="max-w-xl space-y-8 text-center sm:text-left">
-                            <h1 className="text-4xl font-bold sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">
-                                Transform Your Style
-                                <span className="block text-2xl mt-4 text-gray-300">at Zoe Luxury Hair Salon</span>
-                            </h1>
-                            <p className="text-lg text-gray-300">
-                                Experience the art of hairstyling with our expert stylists. Book your appointment today and discover your perfect look.
-                            </p>
-                            <div className="flex gap-4 justify-center sm:justify-start">
-                                <Link
-                                    className="inline-flex items-center px-6 py-3 font-medium text-slate-900 bg-amber-400 rounded-lg hover:bg-amber-500 transition-colors duration-200"
-                                    to="/contact"
-                                >
-                                    Book Appointment
-                                </Link>
-                                <Link
-                                    className="inline-flex items-center px-6 py-3 font-medium text-amber-400 border-2 border-amber-400 rounded-lg hover:bg-amber-400/10 transition-colors duration-200"
-                                    to="/about"
-                                >
-                                    Our Services
-                                </Link>
-                            </div>
+        <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden">
+            {/* Hero Section */}
+            <div className="relative px-2 sm:px-4 lg:px-8 pt-12 sm:pt-16">
+                <div className="w-full max-w-7xl mx-auto">
+                    <div className="text-center">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                            <span className="block text-gray-300">Welcome to</span>
+                            <span className="block bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Zoe's Hair Salon</span>
+                        </h1>
+                        <p className="mx-auto mt-4 sm:mt-6 max-w-lg text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 px-2">
+                            Experience luxury hair care with our expert stylists. Book your transformation today.
+                        </p>
+                        <div className="mt-10 flex justify-center gap-4">
+                            <Link
+                                to="/contact"
+                                className="rounded-lg bg-amber-400 px-6 py-3 text-base sm:text-lg font-semibold text-slate-900 shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 transition-all duration-200"
+                            >
+                                Book Appointment
+                            </Link>
+                            <Link
+                                to="/about"
+                                className="rounded-lg bg-slate-800 px-6 py-3 text-base sm:text-lg font-semibold text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300/20 hover:bg-slate-700 transition-all duration-200"
+                            >
+                                Learn More
+                            </Link>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full">
-                        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-800/90"></div>
-                        <img 
-                            className="w-full h-full object-cover" 
-                            src={BackgroundImage}
-                            alt="Salon Background" 
-                        />
-                    </div>
-                </section>
-
-                {/* Services Section */}
-                <section className="py-16 px-4 bg-gradient-to-b from-slate-800 to-slate-900">
-                    <h2 className="text-center text-3xl sm:text-4xl font-bold mb-12 text-amber-400">Our Signature Services</h2>
-                    <div className="grid sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        <div className="bg-slate-800/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700">
-                            <div className="w-16 h-16 bg-amber-400/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                                <svg className="w-8 h-8 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M7 5a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H9a2 2 0 01-2-2V5z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-semibold text-center mb-2 text-amber-400">Haircut & Styling</h3>
-                            <p className="text-gray-300 text-center">Professional cuts and styles tailored to your unique personality</p>
+            {/* Services Section */}
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+                <div className="text-center">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-amber-400 mb-12">Our Services</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Service Card 1 */}
+                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-amber-400/50 transition-all duration-200">
+                            <div className="text-4xl mb-4">💇‍♀️</div>
+                            <h3 className="text-xl font-semibold text-amber-400 mb-2">Haircut & Styling</h3>
+                            <p className="text-gray-300">Expert cuts and styles tailored to your unique look.</p>
                         </div>
-                        <div className="bg-slate-800/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700">
-                            <div className="w-16 h-16 bg-amber-400/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                                <svg className="w-8 h-8 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-semibold text-center mb-2 text-amber-400">Color & Highlights</h3>
-                            <p className="text-gray-300 text-center">Expert coloring services to enhance your natural beauty</p>
+                        {/* Service Card 2 */}
+                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-amber-400/50 transition-all duration-200">
+                            <div className="text-4xl mb-4">🎨</div>
+                            <h3 className="text-xl font-semibold text-amber-400 mb-2">Color & Highlights</h3>
+                            <p className="text-gray-300">Vibrant colors and natural-looking highlights.</p>
                         </div>
-                        <div className="bg-slate-800/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700">
-                            <div className="w-16 h-16 bg-amber-400/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                                <svg className="w-8 h-8 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-semibold text-center mb-2 text-amber-400">Treatment & Care</h3>
-                            <p className="text-gray-300 text-center">Luxury hair treatments and deep conditioning services</p>
+                        {/* Service Card 3 */}
+                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-amber-400/50 transition-all duration-200">
+                            <div className="text-4xl mb-4">✨</div>
+                            <h3 className="text-xl font-semibold text-amber-400 mb-2">Treatments</h3>
+                            <p className="text-gray-300">Nourishing treatments for healthy, beautiful hair.</p>
                         </div>
                     </div>
-                </section>
+                </div>
+            </div>
 
-                {/* Testimonial Section */}
-                <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
-                    <div className="max-w-5xl mx-auto px-4">
-                        <h2 className="text-center text-3xl sm:text-4xl font-bold mb-12 text-amber-400">What Our Clients Say</h2>
-                        <div className="grid sm:grid-cols-2 gap-8">
-                            <div className="bg-slate-800/50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-700">
-                                <div className="flex items-center mb-4">
-                                    <div className="h-12 w-12 rounded-full bg-amber-400/10 flex items-center justify-center">
-                                        <span className="text-xl font-semibold text-amber-400">S</span>
-                                    </div>
-                                    <div className="ml-4">
-                                        <h4 className="font-semibold text-gray-200">Sarah Johnson</h4>
-                                        <div className="flex text-amber-400">
-                                            ★★★★★
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-gray-300">"The best salon experience I've ever had! The stylists are true artists and the atmosphere is so welcoming."</p>
-                            </div>
-                            <div className="bg-slate-800/50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-700">
-                                <div className="flex items-center mb-4">
-                                    <div className="h-12 w-12 rounded-full bg-amber-400/10 flex items-center justify-center">
-                                        <span className="text-xl font-semibold text-amber-400">M</span>
-                                    </div>
-                                    <div className="ml-4">
-                                        <h4 className="font-semibold text-gray-200">Maria Garcia</h4>
-                                        <div className="flex text-amber-400">
-                                            ★★★★★
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-gray-300">"Love my new look! The team at Zoe really knows how to bring out the best in their clients."</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* CTA Section */}
-                <section className="py-16 px-4">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-amber-400">Ready to Transform Your Look?</h2>
+            {/* CTA Section */}
+            <div className="bg-slate-800/50 border-y border-slate-700">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+                    <div className="text-center">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-300 mb-6">
+                            Ready for a new look?
+                        </h2>
+                        <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                            Join us for a complimentary consultation and discover how we can help you achieve your dream hairstyle.
+                        </p>
                         <Link
-                            to="/contact"
-                            className="inline-flex items-center px-8 py-4 font-medium text-slate-900 bg-amber-400 rounded-lg hover:bg-amber-500 transition-colors duration-200 text-lg"
+                            to="/game"
+                            className="inline-block rounded-lg bg-amber-400 px-6 py-3 text-base sm:text-lg font-semibold text-slate-900 shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 transition-all duration-200"
                         >
-                            Book Your Appointment Today
+                            Try Our Style Game
                         </Link>
                     </div>
-                </section>
+                </div>
+            </div>
+
+            {/* Testimonials */}
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+                <div className="text-center">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-amber-400 mb-12">What Our Clients Say</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Testimonial 1 */}
+                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                            <p className="text-gray-300 mb-4">"Absolutely love my new hairstyle! The team is professional and talented."</p>
+                            <p className="text-amber-400 font-semibold">- Sarah M.</p>
+                        </div>
+                        {/* Testimonial 2 */}
+                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                            <p className="text-gray-300 mb-4">"Best salon experience ever! They really listen to what you want."</p>
+                            <p className="text-amber-400 font-semibold">- Emily R.</p>
+                        </div>
+                        {/* Testimonial 3 */}
+                        <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                            <p className="text-gray-300 mb-4">"The attention to detail and care is unmatched. Highly recommend!"</p>
+                            <p className="text-amber-400 font-semibold">- Jessica K.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    );
+    )
 }
