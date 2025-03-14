@@ -1,5 +1,30 @@
 # Currency Converter React App
 
+## New Features
+
+### 1. Theme Toggle
+- Added a button to toggle between light and dark themes.
+- Uses the `useTheme` context to manage theme state.
+- Includes icons for sun (light mode) and moon (dark mode).
+
+### 2. Exchange Rate Chart
+- Displays historical exchange rate data in a line chart.
+- Allows users to select different time ranges (7 days, 14 days, 30 days).
+- Provides a toggle to reverse the currency pair in the chart.
+
+### 3. Improved UI/UX
+- Enhanced the UI with glassmorphism design.
+- Added smooth animations and transitions for better user experience.
+- Implemented a responsive design that works well on both desktop and mobile devices.
+
+### 4. Error Handling
+- Improved error handling to provide clear messages to the user.
+- Ensures the application handles errors gracefully without breaking.
+
+### 5. Custom Hooks
+- Utilized custom React hooks for fetching currency data and managing state.
+- Ensures a clean separation of concerns and reusability of code.
+
 ## Core Functionality (The 20% that matters most)
 
 ### 1. Main Features
