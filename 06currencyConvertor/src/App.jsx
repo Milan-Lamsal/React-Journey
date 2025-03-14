@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { InputBox } from './Components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 import { ThemeProvider } from './contexts/ThemeContext'
-import ThemeToggle from './components/ThemeToggle'
-import ExchangeRateChart from './components/ExchangeRateChart'
+import ThemeToggle from './Components/ThemeToggle'
+import ExchangeRateChart from './Components/ExchangeRateChart'
 
 function App() {
   //  count is a variable and setCount is a function , we gonna make custome hook
