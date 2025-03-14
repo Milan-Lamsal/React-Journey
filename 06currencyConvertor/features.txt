@@ -1,0 +1,50 @@
+Currency Converter Features
+
+1. Real-time Currency Conversion
+   - Converts amounts between different currencies using the latest exchange rates.
+
+2. Swap Functionality
+   - Allows users to quickly swap the "from" and "to" currencies with a single click.
+
+3. Multiple Currency Support
+   - Supports a wide range of currencies for conversion.
+
+4. Modern, Responsive UI
+   - Provides a user-friendly interface that works well on both desktop and mobile devices.
+   - Includes a dark mode for better user experience in low-light environments.
+
+5. Interactive Input Boxes
+   - Allows users to input amounts and select currencies from dropdown menus.
+   - Provides preset amount buttons for quick input.
+
+6. Exchange Rate Chart
+   - Displays historical exchange rate data in a line chart.
+   - Allows users to select different time ranges (7 days, 14 days, 30 days).
+   - Provides a toggle to reverse the currency pair in the chart.
+
+7. Theme Toggle
+   - Allows users to switch between light and dark themes.
+
+8. Error Handling
+   - Handles errors gracefully, providing clear messages to the user.
+
+9. Smooth Animations and Transitions
+   - Includes interactive hover and focus states for a better user experience.
+
+10. Glassmorphism Design
+    - Uses glass-like effects for a modern and visually appealing design.
+
+11. Responsive Design
+    - Ensures the application looks good and functions well on various screen sizes.
+
+12. Custom Hooks
+    - Utilizes custom React hooks for fetching currency data and managing state.
+
+13. Tailwind CSS Integration
+    - Uses Tailwind CSS for styling, ensuring a consistent and modern look.
+
+14. API Integration
+    - Fetches real-time currency rates from a reliable API.
+
+15. Controlled Components
+    - Uses controlled components for form handling, ensuring a smooth user experience.
