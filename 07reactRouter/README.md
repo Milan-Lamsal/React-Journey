@@ -1,6 +1,8 @@
 # React Router Salon Website with Memory Game
 
-A modern, interactive salon website built with React, featuring a memory card game. This project demonstrates advanced React Router implementation, state management, and interactive animations.
+A modern, interactive salon website built with React featuring a memory card game. This project demonstrates advanced React Router implementation, state management, and interactive animations.
+
+## 🔴Live Demo (https://milan-hair-salon.netlify.app)
 
 ## 🚀 Features
 
