@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { InputBox } from './Components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 import { ThemeProvider } from './contexts/ThemeContext'
-import ThemeToggle from './components/ThemeToggle'
+import ThemeToggle from './Components/ThemeToggle'
 import ExchangeRateChart from './components/ExchangeRateChart'
 
 function App() {
