@@ -105,3 +105,9 @@ Remember: This app is like a calculator specifically for currencies. Instead of 
 - The rates are updated regularly, so you get accurate conversions
 - You can type any amount you want to convert
 - Use the dropdown menus to find your desired currencies 
+
+Reminder:
+Base directory = empty 
+Package directory= empty
+Build command : cd 06currencyConvertor && npm install && npm run build
+publish directory: 07reactRouter/dist
