@@ -1,0 +1,77 @@
+// All the Dependencies 
+
+React Library Used 
+//Redux
+->https://redux-toolkit.js.org/introduction/getting-started
+1)npm install @reduxjs/toolkit 
+2)npm install react-redux
+Then
+3) react-router-dom
+Appwrite
+->https://www.npmjs.com/package/appwrite
+npm i appwrite 
+->https://www.npmjs.com/package/@tinymce/tinymce-react
+4) npm i @tinymce/tinymce-react
+->https://www.npmjs.com/package/html-react-parser
+->npm i html-react-parser
+5)https://react-hook-form.com/get-started
+->npm install react-hook-form
+
+Important concept = Environement Variables, System Variables why?
+->Database, 
+Environment variables are key-value pairs used to store sensitive or configurable information, such as API keys, database URLs, and environment-specific settings.
+ Why are they important?
+
+Security – Hides sensitive information (e.g., API keys) from being exposed in the source code.
+Configuration Flexibility – Allows different settings for development, staging, and production environments.
+Avoids Hardcoding – Prevents storing credentials directly in the codebase, making it reusable and manageable.
+
+3️⃣ Using Environment Variables for Database Configuration
+If you're connecting to a backend database (e.g., MongoDB, Firebase, Supabase), your React frontend should not store database credentials directly.
+Instead:
+
+Store database credentials only in the backend (e.g., Node.js, Express).
+The frontend should only store the backend API URL.
+
+onclusion
+Use environment variables to manage app-specific configurations.
+Never store database credentials in the frontend—use a backend server.
+In Vite, always prefix environment variables with VITE_ to access them in React.
+
+The environment variable should be in the Project root (such as Readme, Package.json is in project root but not the app.css)
+
+dot(.) is the most important -> .env
+-> This .env we never shift in github or in production so when pushing the simple way is to (we do add to .gitignore)
+
+How to take access to the Environement Variable 
+in backend , frontend they use different way to acces , react app way is different, vite is differenct , appwrite is different all over to access the environment variables are different ways 
+
+-> Also we don't export in .env
+ => to see  console.log(Process.env.REACT_APP_APPWRITE_URL);
+
+ Environement variable files only load one time usually but if you add or remove then maximum cases you have to close the project and restart again
+ 
+ if you create you environment varibale using " React Create App " then we need to use
+ process.env.REACT_APP_NOT_SECRET_CODE => need to have "REACT_APP_"
+ 
+ But we are using " Vite " Not React Create App" so we used
+ -> VITE_ and Instead of process.env unlike in Creat React App we use (import.meta.env.VITE_)
+ Accoding to documentation- >https://vite.dev/guide/env-and-mode 
+
+ Now go to appwrite and create a project
+ 1)go to seeting and copy the API endpoin and paste in VITE_APPWRITE_URL= 
+ 2)then copy Project ID
+ 3)create database and get the id now in the database add create collection which is the table for datbase and then copy the id 
+ 4)then for the bucket Id get it from storage keep images and get id  
+
+ Creating Config.js we export key value, cus we don't want to write import.meta.env everywhere 
+
+ +++++++++++++++++++++++++++++++++++ Appwrite +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-> Appwrite has many services such as database, authetication, upload, download 
+https://appwrite.io/docs/products/databases/documents
+ //Vendor lockin -> if you want to takout the authetication the app can still work so we make SERVICES 
+
+ First we created appwrite folder and then
+ they are backend  
+ 1)auth_service.js
+ 2)appwriteconfig.js  
