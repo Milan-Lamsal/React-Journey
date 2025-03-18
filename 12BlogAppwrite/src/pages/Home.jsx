@@ -45,7 +45,7 @@ function Home() {
                 <Container>
                     <div className="max-w-2xl mx-auto text-center">
                         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                            Welcome to AppwriteBlog
+                            Welcome to Milan-Blog
                         </h1>
                         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
                             Share your thoughts, stories, and ideas with the world. Join our community of writers and readers.

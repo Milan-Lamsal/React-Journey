@@ -47,7 +47,7 @@ function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-purple-900">
+      <div className="min-h-screen w-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-purple-900">
         <div className="text-center">
           <div className="inline-block w-20 h-20 border-4 border-t-blue-500 border-r-transparent border-b-blue-500 border-l-transparent rounded-full animate-spin mb-4"></div>
           <div className="text-white text-xl font-medium">Loading your experience...</div>
@@ -57,14 +57,12 @@ function App() {
   }
 
   return (
-    <div className='min-h-screen flex flex-wrap content-between bg-gray-100 dark:bg-gray-900 transition-colors duration-300'>
-      <div className='w-full block'>
-        <Header />
-        <main className="container mx-auto px-4 py-8">
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+    <div className='min-h-screen min-w-full flex flex-col bg-gray-100 dark:bg-gray-900 transition-colors duration-300 overflow-x-hidden'>
+      <Header />
+      <main className="flex-grow w-full py-4">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   )
 }
