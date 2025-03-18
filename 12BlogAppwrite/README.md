@@ -6,9 +6,7 @@ A full-featured blogging platform built with React and Appwrite backend, featuri
 
 ## 🌐 Live Demo
 
-Visit the live demo: [Milan-Blog](https://your-site-name.netlify.app)
-
-> Note: The demo site is currently under deployment. Please check back soon!
+Visit the live demo: [Milan-Blog](https://milan-blog-with-appwrite-tawny.vercel.app)
 
 ## 🌟 Features
 
