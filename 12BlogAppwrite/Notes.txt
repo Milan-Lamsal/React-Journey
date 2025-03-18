@@ -75,3 +75,80 @@ https://appwrite.io/docs/products/databases/documents
  they are backend  
  1)auth_service.js
  2)appwriteconfig.js  
+
+ ++++++++++++++++++++++++++++++++++++++++++ Store ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ we need to import configureStore from reduxjs / toolkit
+ import { configureStore } from '@reduxjs/toolkit';
+
+const store = configureStore({
+    reducer: {
+    }
+});
+
+export default store; 
+
+in store there is state and action , payload
+
+============================================= Components ======================================================
+1)Header
+2)Footer
+->import { Link } from 'react-router-dom'
+index.js to export both Header and Footer
+3-logoutbtn
+
+================================================== App.jsx =====================================================
+
+making an loading state 
+Dispatch comes from react-redux
+
+Dispatch is the combination when react with redux 
+
+
+In options you usually get array
+
+handlesubmit is an event 
+
+  {...register} always spread otherwise it will overwrite
+
+  //////////////////////////////////////// REGEXP ////////////////////////////////////////
+  Login 
+=> for validation 
+https://regexr.com/
+it's used to match patterns in text. To either detect a pattern, or extract data from a string that follows a particular pattern.
+
+  {...register} its a syntax not a spread 
+
+  How pages and routes can be procted => Authlayout 
+
+  ======================================= RTE (REAL TIME EDITOR ) ==============================
+
+<Editor
+            initialValue='default value'
+            init={
+                {
+                    branding: false,
+                    height: 500,
+                    menubar: true,
+                },
+                plugin:[]
+
+                //Interview Quesiton
+                Optimize 
+
+    React.useEffect(() => {
+        const subscription = watch()
+
+        return ()=>{
+            subscription.unsubscribe()
+        }
+
+        store in variable, return call back unsubscribe 
+
+
+
+
+
+        +++++++++++++++++++++++++++++ Debugging +++++++++++++++++++++++++++++++
+
+        CORS error =>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS
