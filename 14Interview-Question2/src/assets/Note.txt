@@ -1,0 +1,29 @@
+When is the <App> being re-render 
+
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  console.log("App rendered") // prints two times because its on strict mode in main.jsx only in development but it won't happen in production 
+  const [value, setValue] = useState(1)
+
+  const clickMe = () => {
+    console.log("logeed");
+  }
+
+  return (
+    <>
+      <h1>Question 2 </h1>
+      <h2>Main value:{value}</h2>
+      <button
+        onClick={clickMe}
+      >click to multiply by 2 </button>
+    </>
+
+  )
+}
+
+export default App
+
+Caveat-> warning or notice of limitation, like sayig be careful or keep this in mind before movieng forward

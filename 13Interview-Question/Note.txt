@@ -1,0 +1,23 @@
+In react if there is any change in state, or change in props then the whole compoenent re-renders, sometimes we want to re-render by using useEffect but you have to understand that if any state is change then the compoenent get rerender 
+
+Mount -> means adding a compoenent to the DOM(RENDERING )
+When a React component mounts, it means:
+✅ The component is created.
+✅ It goes through the initial rendering process.
+✅ It becomes visible in the UI.
+
+Instead of using two state variables, we compute multiplyValue directly from value. This avoids unnecessary state updates, reduces bugs due to outdated state values, and improves performance. The component re-renders when value changes, and multiplyValue updates automatically without needing extra state.
+
+Mount 🏗️
+Occurs only once when the component is first added to the DOM.
+It is the initial process when a component is created and displayed for the first time.
+The componentDidMount() lifecycle method (in class components) or useEffect() with an empty dependency array ([]) is used for this.
+Mounting does not happen again unless the component is removed and re-added to the DOM.
+The component is now ready to interact with the DOM, make API calls, or perform setup tasks.
+
+Render 🔄
+Occurs every time the state or props of a component change.
+When a state change (setState or useState) or a prop change happens, React triggers a re-render to update the UI.
+The render() method (in class components) or the component function itself (in functional components) is called during each render.
+React re-renders the component without remounting, preserving its state.
+If a parent component re-renders, the child components will also re-render, but they are not mounted again.
